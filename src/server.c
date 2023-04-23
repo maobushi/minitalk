@@ -3,16 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   server.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: msys <msys@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: mobushi <mobushi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/07 18:28:53 by msys              #+#    #+#             */
-/*   Updated: 2022/12/07 22:43:43 by msys             ###   ########.fr       */
+/*   Created: 2022/12/07 18:28:53 by mobushi           #+#    #+#             */
+/*   Updated: 2023/04/21 20:29:43 by mobushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#include<stdio.h>
 #include<libc.h>
+
 void signal_handler(int signum)
 {
     static int i = 0;
@@ -39,6 +38,9 @@ void signal_handler(int signum)
 }
 
 int main(void){
+    printf("UNKO\n");
+    //write(STDOUT_FILENO, getpid(), 6);
+    printf("HIKAKINTV:%d\n",getpid());
     signal(SIGUSR1,&signal_handler);
     signal(SIGUSR2,&signal_handler);
     while(1)
