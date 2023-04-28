@@ -1,5 +1,5 @@
-CC = gcc
-#CFLAGS = -Wall -Wextra -Werror
+CC = cc
+CFLAGS = -Wall -Wextra -Werror 
 C_NAME = client
 S_NAME = server
 SRCDIR = src
